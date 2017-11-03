@@ -1,0 +1,73 @@
+<div class="auth-main " style="background-image:url('../../../../assets/img/logo.png')">
+  <div class="auth-block-main">
+    <div class="row welcome-label">
+     <div class="col-lg-8 label-margin"> Welcome Admin,Please Sign In</div>
+     <div class="col-lg-4 logo-alignment"><img src="../../../../assets/img/logoicon.png" style="width:55px;height:70px;"></div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value,$event)" class="form-horizontal form-padding">
+      <div class="form-group row" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
+        <div class="col-sm-3">
+          <!-- <label for="inputEmail3">{{language.email}}</label> -->
+          <label for="inputEmail3">Email</label> 
+        </div>
+        <div class="col-sm-9">
+          <input [formControl]="email" type="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="user.email">
+          <!-- <div class="error-message alert alert-danger" *ngIf="form.controls['email'].errors?.required && !form.controls['email'].pristine">{{language.emailRequired}}</div>
+          <div class="error-message alert alert-danger" *ngIf="form.controls['email'].errors?.invalid && !form.controls['email'].pristine">{{language.invalidEmail}}
+          </div> -->
+          <div class="error-message alert alert-danger" *ngIf="form.controls['email'].errors?.required && !form.controls['email'].pristine">Email is required</div>
+          <div class="error-message alert alert-danger" *ngIf="form.controls['email'].errors?.invalid && !form.controls['email'].pristine">Invalid Email
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" [ngClass]="{'has-error': (!password.valid && password.touched), 'has-success': (password.valid && password.touched)}">
+        <div class="col-sm-3">
+          <!-- <label for="password" class="control-label">{{language.password}}</label> -->
+          <label for="password" class="control-label">Password</label>
+        </div>
+        <div class="col-sm-9">
+          <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password"
+            [formControl]="password">
+          <!-- <div class="error-message alert alert-danger" *ngIf="form.controls['password'].errors?.required && !form.controls['password'].pristine">{{language.passwordIsRequired}}
+          </div> -->
+          <div class="error-message alert alert-danger" *ngIf="form.controls['password'].errors?.required && !form.controls['password'].pristine">Password is required
+        </div>
+        </div>
+      </div>
+
+      <!-- <div class="form-group row" [ngClass]="{'has-error': (!role.valid && role.touched), 'has-success': (role.valid && role.touched)}">
+        <div class="col-sm-3">
+          <label for="role" class="control-label">{{language.role}}</label>
+        </div>
+        <div class="col-sm-9"> -->
+         <!--  <select name="role" class="form-control" [(ngModel)]="user.role" id="role" [ngModelOptions]="{standalone: true}" required> -->
+            <!-- <select name="role" class="form-control" [(ngModel)]="user.role" id="role" formControlName="role">
+              <option selected>{{language.select}} </option>
+          <option *ngFor="let role of roles" [value]="role.value">{{role.display}}</option>
+          </select>
+          <div class="error-message alert alert-danger" *ngIf="form.controls['role'].errors?.required && !form.controls['role'].pristine">{{language.roleIsRequired}}
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="row">
+        <div class="checkbox checkbox-primary offset-sm-3 col-sm-9">
+          <input id="checkboxRemember" type="checkbox"  [(ngModel)]="user.checkboxRemember" [formControl]="checkboxRemember" >
+          <label for="checkboxRemember">Remember me</label>
+        </div>
+      </div> -->
+      <!-- <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9"><a routerLink="/forgot" class="default-link">Forgot Password</a></div>
+      </div> -->
+      <div class="form-group row" style="padding-top:15px;">
+        <div class="offset-sm-3 col-sm-9">
+          <!-- <button type="submit" class="btn btn-default btn-block" [disabled]="!form.valid">{{language.loginBtn}}</button> -->
+          <button type="submit" class="login-btn" [disabled]="!form.valid">Login</button>
+        </div>
+        <!--{{form.valid}}-->
+      </div>
+  
+    </form>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "hello" : "Bonjour",
+  "general": {
+    "home": "maison",
+    "dashboard": {
+      "acquisitionChannels": "Acquisition Channels",
+      "usersByCountry": "Users by Country",
+      "revenue": "Revenue",
+      "feed": "Feed",
+      "toDoList": "To Do List",
+      "calendar": "Calendar",
+      "newVisits": "New Visits",
+      "purchases": "Purchases",
+      "activeUsers": "Active Users",
+      "returned": "Returned"
+    },
+    "forms": {
+      "option1": "Option 1"
+    },
+    "menu": {
+      "dashboard": "tableau de bord",
+      "Bookings":"réservation",
+       "Customers":"client",
+       "activecustomers":"Active Customers",
+        "allcustomers":"tout client",
+       "onbookings":"en cours réservation" ,
+       "ServiceProviders":"Service fournisseur",
+        "activeservices":"Active Services",
+         "allservices":"tout Service fournisseur",
+       "Drivers":"chauffeur",
+       "activerides":"Active Rides",
+       "allrides":"tout chauffeur",
+      "pastbookings":" passé réservation",
+      "allbookings":"tout réservation"
+     
+    }
+  }
+}

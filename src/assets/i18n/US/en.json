@@ -1,0 +1,50 @@
+{
+  "hello" : "Hello",
+  "general": {
+    "home": "Home",
+    "dashboard": {
+      "acquisitionChannels": "Acquisition Channels",
+      "usersByCountry": "Users by Country",
+      "revenue": "Revenue",
+      "feed": "Feed",
+      "toDoList": "To Do List",
+      "calendar": "Calendar",
+      "totalBookingCount": "Total Booking Count",
+      "customerCount": "Customer Count",
+      "driverCount": "Driver Count",
+      "serviceProviderCount": "service Provider Count",
+      "todaysBookingRequestsCount":"Todays Booking Requests",
+      "todaysRevenue":"Todays Revenue",
+      "totalRevenue":"Total Revenue"
+    },
+    "forms": {
+      "option1": "Option 1"
+    },
+    "menu": {
+      "dashboard": "Dashboard",
+      "Bookings":"Bookings",
+       "Customers":"Customers",
+       "deletedcustomers":"Deleted Customers",
+       "blockedcustomers":"Blocked Customers",
+       "allcustomers":"All Customers",
+       "registerservices":"Register Services",
+
+
+       "driver" :"Drivers",
+       "alldrivers" :"All Drivers",
+
+       "onbookings":"OnGoing Bookings" ,
+       "ServiceProviders":"ServiceProviders",
+        "activeservices":"Active Services",
+         "allservices":"All Service Providers",
+
+       "Drivers":"Drivers",
+       "activerides":"Active Rides",
+       "allrides":"All Drivers",
+      "pastbookings":" Past Booking",
+      "allbookings":"All Booking",
+      "keyMessage":"Add Key-Message"
+     
+    }
+  }
+}

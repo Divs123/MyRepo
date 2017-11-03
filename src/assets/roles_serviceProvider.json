@@ -1,0 +1,52 @@
+{
+     "role_id": "34234234hsp",
+        "role_name": "serviceProvider",
+    "permission_set": {
+       "landingPage": true,
+        "dashboard": {
+            "visible": true
+        },
+        "customer": {
+            "visible": false,
+            "child_permissions": {
+                "createCustomer": false,
+                "editCusotmer": false,
+                "blockCustomer": false,
+                "detailsCustomer": false,
+                "deleteCustomer": false
+            }
+        },
+        "driver": {
+            "visible": true,
+            "child_permissions": {
+                "createDriver": true,
+                "editDriver": true,
+                "blockDriver": true,
+                "detailsDriver": true
+            }
+        },
+        "serviceProvider": {
+            "visible": true,
+            "child_permissions": {
+                "createServiceProvider": true,
+                "editServiceProvider": true,
+                "blockServiceProvider": true,
+                "detailsServiceProvider": true
+            }
+        },
+        "booking": {
+            "visible": true,
+            "child_permissions": {
+                "cancelBooking": true,
+                "detailsBooking": true
+            }
+        },
+        "settings": {
+            "visible": true,
+            "child_permissions": {
+                "addKeyMessage": true,
+                "showKeyMessages": true
+            }
+        }
+    }
+}

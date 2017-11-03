@@ -1,0 +1,101 @@
+@import "../../../../theme/sass/conf/conf";
+
+.all
+{
+    width:50px;
+    height:50px!important;
+
+}
+.edit
+{
+  background-color:#7ed321;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.widgets.all-notifications-page{
+margin-top:20px;
+h3{
+  margin-bottom: 20px;
+}
+table{
+  border:1px solid #7ed321;
+  tr.text-muted{
+    color:#000 !important;
+  }
+  tr.text-primary{
+      color:#000 !important; 
+  }
+  tr{
+td{
+  text-align: center;
+  border-bottom: 1px solid #7ed321;
+}
+  }
+  th{
+    border-top: 1px solid #7ed321;
+    border-bottom: 1px solid #7ed321;
+  }
+}
+}
+@media only screen and (max-width:767px)
+{
+.widgets.all-notifications-page{
+.table > tbody > tr > td{
+    font-size: 11px;
+    line-height: 17px;
+    padding: 12px 8px;
+}
+.container{
+padding:0;
+
+}
+}
+}
+
+h3.all-notification{
+  color: #7ed321;
+}
+
+.header-clr{
+  color: #7ed321;
+}
+
+.ngx-pagination
+{
+margin-top:20px;
+padding:0;
+.pagination-next a
+{
+  &:hover{
+    background:rgba(0, 0, 0, 0.1);;
+  }
+}
+li{
+a:hover{
+   background:rgba(0, 0, 0, 0.1);;
+}
+}
+}
+
+.rar-algn{
+  text-align: right;
+}
+.ngx-pagination .disabled{
+  color: #000000;
+}
+
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem !important;
+  background: #fff !important;
+  color: #7ed321 !important;
+  cursor: default !important;
+  border: 1px solid #7ed321 !important;
+}
+.ngx-pagination a,.ngx-pagination a:hover,.ngx-pagination .pagination-next a:hover,.ngx-pagination .pagination-previous a:hover{
+  background-color: #7ed321;
+}
+
+.table>tbody>tr{
+  cursor: pointer;
+}

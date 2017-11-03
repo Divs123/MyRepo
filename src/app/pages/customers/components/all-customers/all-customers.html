@@ -1,0 +1,84 @@
+
+<div>
+<div class="container">
+<div class="col-lg-6 custom-col">
+<div class="multi-select-cls">
+    <ss-multiselect-dropdown  [texts]="myTexts" [options]="myOptions" [(ngModel)]="optionsModel" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+    <select class="selectpicker" [(ngModel)]="limit"  (ngModelChange)="getPagesCount($event)">
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+    <div class="recordsPerPage">Records Per Page</div>
+</div>
+  </div>
+  <br>
+  <div class="panel panel-default panel-table">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4 text-center" style="color:#7ed321;">
+          <h3>All Askers</h3>
+        </div>
+        <div class="col-sm-4 text-right">
+          <input #inputstring  (keyup)="SearchCustomer(inputstring.value)" placeholder="Search" id="searchbox" />
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped table-bordered table-list table-responsive table-clr">
+        <thead>
+          <tr>
+            <!-- <th class="hidden-xs">Sr. No</th> -->
+            <th [class.active]="order === 'name'" (click)="setOrder('name')">Name <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'email'" (click)="setOrder('email')"> Email <span [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span></th>
+            <th> Phone Number</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of customers | orderBy: order:reverse | paginate: { itemsPerPage: limit, currentPage: page, totalItems: count };  let i = index">
+            
+            <!-- <td>{{ i + pageIndex + 1 }}</td> -->
+            <td class="table-text">{{ data.name}} {{data.lastName}}</td>
+            <td>{{ data.email }}</td>
+            <td>{{ data.contacts[0].mobile}}</td>
+            <td align="right">
+              <a class="btn btn-info" *ngIf="data.isBlocked == false" [hidden]="data.isDeleted == true" (click)="blockCustomerConfirm(data)" title="block">
+                <em class="fa fa-unlock"></em>
+              </a>
+              <a class="btn btn-info" *ngIf="data.isBlocked == true" [hidden]="data.isDeleted == true" (click)="blockCustomerConfirm(data)" title="unblock">
+                <em class="fa fa-lock"></em>
+              </a>
+              <a class="btn btn-info" *ngIf="data.isDeleted != true" (click)="deleteCustomerConfirm(data)" title="delete">
+                <em class="fa fa-trash"></em>
+              </a>
+
+             <span class="spc-cls"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <a class="btn btn-info" (click)="showCustomerDetail(data)">
+                <em class="fa fa-indent"></em>
+              </a>
+            </td>
+            <td><button class="booking-btn" (click)="viewBookings(data)">View Booking Details</button></td>
+          </tr>
+        </tbody>
+
+
+      </table>
+    </div>
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col col-xs-2">
+          <!-- Page 1 of 5 -->
+        </div>
+        <div *ngIf="count > 4" class="col col-xs-10 rar-align">
+          <pagination-controls (pageChange)="pageChanged($event)" maxSize="5" directionLinks="true" autoHide="true" previousLabel="Previous"
+            nextLabel="Next" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </div>

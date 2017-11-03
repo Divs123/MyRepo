@@ -1,0 +1,92 @@
+@import '../../../theme/sass/auth';
+.multilingual-link{
+	cursor: pointer;
+	color: #54FF9F !important;
+}
+.rar-lang {
+    position: absolute;
+    width: 170px;
+    right: 20px;
+    top: 20px;
+  }
+  .container-fluid.new-login-page
+  {
+    position: inherit;
+  }
+  .mobile_view{
+  display: none !important;
+}
+.desktop_view{
+   display: block !important;
+}
+  .default-link{
+    margin-bottom: 16px;
+    float: left;
+  }
+  @media only screen and (max-width:480px)
+  {
+    .new-login-page .auth-main {
+        position: relative !important;
+
+      .auth-block h1{
+                margin-bottom: 20px;
+              }
+        select.selectpicker.form-control.rar-lang.new-form-control.mobile_view{
+            position: relative;
+            margin: 20px auto 50px;
+            left:0;
+
+        }
+    }
+.form-control.new-form-control{
+left:85px;
+top:7px;
+}
+.mobile_view{
+  display: block !important;
+}
+.desktop_view{
+   display: none !important;
+}
+  }
+
+  .form-padding{
+      padding-top: 30px;
+  }
+
+.auth-block-main{
+  width: 600px;
+  margin: 0 auto;
+  // border-radius: 5px;
+  background:#7ed321;
+  padding: 32px;
+}
+.welcome-label{
+  font-size: 20px;
+  letter-spacing: 0.9px;
+  padding-top: 15px;
+}
+
+.logo-alignment{
+  text-align: center;
+  background-color: #fff;
+}
+
+.label-margin{
+  margin-top: 20px;
+}
+
+.login-btn{
+  width: 100%;
+  color: #7ed321;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.login-btn:disabled{
+  cursor: not-allowed;
+
+}

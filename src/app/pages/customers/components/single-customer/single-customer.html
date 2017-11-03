@@ -1,0 +1,42 @@
+<div class="widgets">
+  <div class="container notification-page">
+   <div *ngIf="newUserData" class="col-xs-12" style="color:#7ed321;">
+      <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">Name</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.name}}</div>
+      </div>
+
+      <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">Email</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.email}}</div>
+      </div>
+
+      <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">isEmailVerified</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.isEmailVerified}}</div>
+      </div>
+
+      <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">isAdminVerified</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.isAdminVerified}}</div>
+      </div>
+
+
+      <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">isDeleted</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.isDeleted}}</div>
+      </div>
+
+     <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">isBlocked</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.isBlocked}}</div>
+      </div>
+
+      <div class="row" style="border:1px solid #7ed321;">
+        <div class="col-md-6 col-sm-6 col-xs-12">mobile</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">{{newUserData.contacts[0].mobile}}</div>
+      </div>
+      </div>
+  </div>
+  
+</div>

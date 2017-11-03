@@ -1,0 +1,138 @@
+@import "../../../../theme/sass/conf/conf";
+
+.all
+{
+    width:50px;
+    height:50px!important;
+
+}
+.edit
+{background-color:#209e91;
+height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+}
+
+.rar-align{
+  text-align: right
+}
+.panel-default
+{
+  .panel-heading{
+margin-bottom: 10px;
+
+}
+}
+.ngx-pagination
+{
+margin-top:20px;
+padding:0;
+
+.pagination-next a
+{
+  &:hover{
+    background:rgba(0, 0, 0, 0.1);;
+  }
+}
+li{
+a:hover{
+   background:rgba(0, 0, 0, 0.1);;
+}
+
+}
+}
+// alldrivers .ngx-pagination a, alldrivers .ngx-pagination button, allcustomers .ngx-pagination a, allcustomers .ngx-pagination button, all-notifications .ngx-pagination a, all-notifications .ngx-pagination button
+// {
+//   // color: #7ed321;
+//   background-color: #7ed321;
+// }
+// ngx-pagination li a{
+//   color: red;
+// }
+
+.ngx-pagination a,.ngx-pagination a:hover,.ngx-pagination .pagination-next a:hover,.ngx-pagination .pagination-previous a:hover{
+  background-color: #7ed321;
+}
+
+.ngx-pagination .disabled{
+  color: #000000;
+}
+
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem !important;
+  background: #fff !important;
+  color: #7ed321 !important;
+  cursor: default !important;
+  border: 1px solid #7ed321 !important;
+}
+
+// .ngx-pagination .pagination-next a:hover{
+//   background-color: #7ed321;
+// }
+
+.selectpicker{
+  width: 80px;
+  height: 36px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #7ed321;
+  // background-color: transparent;
+  outline: none;
+  margin-left: 10px;
+}
+
+.recordsPerPage{
+  display: inline-block;
+  margin-left: 10px;
+  color: #7ed321;
+}
+/*.modal {
+  padding-top: 300px;
+
+  .modal-content {
+    color: $dropdown-text;
+
+    .modal-header {
+      border: none;
+    }
+
+    .modal-footer {
+      border: none;
+    }
+
+    .close {
+      outline: none;
+    }
+  }
+}
+
+.modal-buttons .btn {
+  margin-right: 20px;
+}*/
+thead th {
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
+
+  span {
+    visibility: hidden;
+  }
+
+  &.active {
+    color: #ffffff;
+
+    span {
+      visibility: visible;
+    }
+  }
+}
+
+.table-clr{
+  background-color: #7ed321;
+}
+
+.booking-btn{
+  cursor: pointer;
+  margin: 10px;
+}

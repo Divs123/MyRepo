@@ -1,0 +1,100 @@
+<div *ngIf="bookingss.length>0">
+  <div class="widgets">
+    <div class="row">
+      <div class="col-lg-6">
+        <h4>Records Per Page</h4>
+        <select class="col-lg-6  tex-right dropdown-clr" [(ngModel)]="limit" (ngModelChange)="getPagesCount($event)" style="height:35px;outline:none;">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class=col-lg-6 custom-col>
+      </div>
+      <!-- <div class="col-lg-4 text-right" style="padding-top:22px;">
+              <input #inputstring  (keyup)="SearchbyTitle(inputstring.value)" placeholder="Search by title" id="searchbox" />
+          </div> -->
+
+    </div>
+
+    <!-- <table class="table table-striped table-bordered table-list table-responsive table-clr" *ngIf="count>0"> -->
+    <table class="table table-striped table-bordered table-list table-responsive table-clr">
+      <thead>
+        <tr>
+          <!-- <th>Sr. No</th> -->
+          <th>Booking Type</th>
+          <th>Title</th>
+          <th [class.active]="order === 'bookingDateTimeFrom'" (click)="setOrder('bookingDateTimeFrom')">Booking Date and Time
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+          <th>Current Status</th>
+          <th>Creation Time</th>
+          <th [class.active]="order === 'duration'" (click)="setOrder('duration')">Duration
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+          <th [class.active]="order === 'price'" (click)="setOrder('price')">Price
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+          <th [class.active]="order === 'summary'" (click)="setOrder('summary')">Short Summary
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+          <th [class.active]="order === 'credits'" (click)="setOrder('credits')">Bid Credits Deduction Value
+            <span [hidden]="reverse">▼</span>
+            <span [hidden]="!reverse">▲</span>
+          </th>
+          <th>Review By Asker</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of bookingss | orderBy: order:reverse | paginate: { itemsPerPage: limit, currentPage: page, totalItems: count }; let i = index">
+          <td>{{ data.bookingType }}</td>
+          <td>{{data.bookingHeadline}}</td>
+          <td class="tdmin-width">{{ data.bookingDateTimeFrom |date: "EEE, dd/MM/yyyy hh:mm a"}}</td>
+          <td>{{ data.currentStatus }}</td>
+          <td class="tdmin-width">{{ data.createdAt |date: "EEE, dd/MM/yyyy hh:mm a" }}</td>
+          <td>{{ data.duration }}</td>
+          <td>{{ data.price }}</td>
+          <td>{{ data.shortSummery }}</td>
+          <td>{{ data.bidCreditsDeductionValue}}</td>    
+          <td>{{data.reviewByCustomer?data.reviewByCustomer:'N/A'}}</td>   
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="count==0" class="no-bookings">No Bookings Available !!</div>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="c('Close click')">{{language.customerClose}}</button>
+      </div>
+    </ng-template>
+    <div class="panel-footer footer-padding">
+      <div class="row">
+        <div class="col col-xs-2">
+          <!-- Page 1 of 5 -->
+        </div>
+        <div *ngIf="count > 4" class="col col-xs-10 rar-algn text-right">
+          <pagination-controls (pageChange)="pageChanged($event)" maxSize="6" directionLinks="true" autoHide="true" previousLabel="previous"
+            nextLabel="next" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="bookingss.length==0">
+  <div class="no-bookings">No Booking Found!!</div>
+</div>

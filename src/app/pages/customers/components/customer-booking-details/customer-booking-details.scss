@@ -1,0 +1,75 @@
+@import "../../../../theme/sass/conf/conf";
+
+.all
+{
+    width:50px;
+    height:50px!important;
+
+}
+.colorSelect{
+  color: black;
+}
+.edit
+{
+  background-color:#7ed321;
+height: 38px;
+    width: 38px ;
+    border-radius: 50% ;
+    margin: 6px auto 6px ;
+
+}
+th{
+  cursor: pointer;
+}
+.footer-padding{
+  padding-top: 20px;
+}
+
+.no-bookings{
+  text-align: center;
+  font-size: 25px;
+  padding-top: 50px;
+}
+/*.modal {
+  padding-top: 300px;
+
+  .modal-content {
+    color: $dropdown-text;
+
+    .modal-header {
+      border: none;
+    }
+
+    .modal-footer {
+      border: none;
+    }
+
+    .close {
+      outline: none;
+    }
+  }
+}
+
+.modal-buttons .btn {
+  margin-right: 20px;
+}*/
+
+.table-clr{
+  background-color:#7ed321;
+}
+
+.dropdown-clr{
+  background-color: #7ed321;
+  color: #ffffff;
+}
+.tdmin-width{
+  min-width: 200px;
+}
+
+.no-bookings{
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  padding: 30px;
+  background-color: #7ed322;
+}

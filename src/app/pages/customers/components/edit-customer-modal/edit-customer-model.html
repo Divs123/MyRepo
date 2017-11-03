@@ -1,0 +1,41 @@
+<div class="modal-content">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal">
+    <div class="modal-header">
+        <!-- @TODO Multilingual -->
+      <h4 class="modal-title">Edit Customer</h4>
+      <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body rar-bg">
+
+<div class="form-group row" [ngClass]="{'has-error': (!name.valid && name.touched), 'has-success': (name.valid && name.touched)}">
+  <label for="inputName3" class="col-sm-3 control-label">{{language.customerName}}</label>
+
+  <div class="col-sm-9">
+    <input [formControl]="name" type="text" class="form-control" id="inputName3" placeholder="{{language.customerName}}">
+    <div class="error-message alert alert-danger" *ngIf="form.controls['name'].errors?.minlength && !form.controls['name'].pristine">Min length must be 3</div>
+  </div>
+</div>
+<div class="form-group row" [ngClass]="{'has-error': (!companyName.valid && companyName.touched), 'has-success': (companyName.valid && companyName.touched)}">
+  <label for="companyName" class="col-sm-3 control-label">{{language.companyName}}</label>
+
+  <div class="col-sm-9">
+    <input [formControl]="companyName" type="text" class="form-control" id="companyName" placeholder="Company Name">
+  </div>
+</div>
+<div class="form-group row" [ngClass]="{'has-error': (!companyAddress.valid && companyAddress.touched), 'has-success': (companyAddress.valid && companyAddress.touched)}">
+  <label for="companyAddress" class="col-sm-3 control-label">{{language.companyAddress}}</label>
+
+  <div class="col-sm-9">
+    <input [formControl]="companyAddress" type="text" class="form-control" id="companyAddress" placeholder="Company Address">
+  </div>
+</div>
+</div>
+<div class="modal-footer">
+  <!-- @TODO Multilingual -->
+  <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Update</button>
+  <button class="btn btn-danger " (click)="closeModal()">{{language.customerClose}}</button>
+</div>
+</form>
+</div>

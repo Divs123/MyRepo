@@ -1,0 +1,51 @@
+{
+     "role_id": "34234234h",
+        "role_name": "admin",
+    "permission_set": {
+       
+        "dashboard": {
+            "visible": true          
+        },
+        "customer": {
+            "visible": true,
+            "child_permissions": {
+                "createCustomer": true,
+                "editCusotmer": true,
+                "blockCustomer": true,
+                "detailsCustomer": true
+            }
+        },
+        "driver": {
+            "visible": true,
+            "child_permissions": {
+                "createDriver": true,
+                "editDriver": true,
+                "blockDriver": true,
+                "detailsDriver": true
+            }
+        },
+        "serviceProvider": {
+            "visible": true,
+            "child_permissions": {
+                "createServiceProvider": true,
+                "editServiceProvider": true,
+                "blockServiceProvider": true,
+                "detailsServiceProvider": true
+            }
+        },
+        "booking": {
+            "visible": true,
+            "child_permissions": {
+                "cancelBooking": true,
+                "detailsBooking": true
+            }
+        },
+        "settings": {
+            "visible": true,
+            "child_permissions": {
+                "addKeyMessage": true,
+                "showKeyMessages": true
+            }
+        }
+    }
+}

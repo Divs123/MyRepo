@@ -1,0 +1,36 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">Customer Details</h4>
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>  
+  <div class="modal-body">
+    
+    <div *ngIf="activeCustomer" class="col-xs-12">
+      <div class="row">
+        <table class="table-responsive details">
+          <thead class="heading"> <th> Key </th> <th> Value</th> </thead>
+          <tbody>
+        <tr> <td> Id </td> <td> {{activeCustomer._id}}</td>  </tr>
+        <tr> <td> Name </td> <td class="table-text"> {{activeCustomer.name}}</td>  </tr>
+       <tr> <td> Last Name </td> <td class="table-text"> {{activeCustomer.lastName ? activeCustomer.lastName : 'N/A' }}</td>  </tr>
+       <tr> <td> Email </td> <td> {{activeCustomer.email}}</td>  </tr>
+       <!-- <tr> <td> UserName </td> <td> {{activeCustomer.userName}}</td>  </tr> -->
+        <tr> <td> Country Code </td> <td> {{activeCustomer.contacts[0].countryCode}}</td>  </tr>
+       <tr> <td> Contact </td> <td> {{activeCustomer.contacts[0].mobile}}</td>  </tr>
+         <tr> <td> Created At  </td> <td> {{activeCustomer.createdAt | date: "MM/dd/yyyy 'at' h:mma"}}</td>  </tr>
+         <tr> <td> Role  </td> <td> {{activeCustomer.role }}</td>  </tr>
+          <!-- <tr> <td> Admin Verified  </td> <td> {{activeCustomer.isAdminVerified}}</td>  </tr> -->
+          <tr> <td> Blocked  </td> <td> {{activeCustomer.isBlocked}}</td>  </tr>
+           <!-- <tr> <td> Deleted  </td> <td> {{activeCustomer.isDeleted}}</td>  </tr> -->
+          </tbody>
+        </table>
+      </div>
+
+     </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary confirm-btn" (click)="closeModal()">Close</button>
+  </div>
+</div>

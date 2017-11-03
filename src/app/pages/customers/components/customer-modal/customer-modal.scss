@@ -1,0 +1,38 @@
+@import "../../../../theme/sass/conf/conf";
+
+.modal-buttons .btn {
+  margin-right: 20px;
+}
+
+.modal-content {
+  color: $dropdown-text;
+}
+.modal-header{
+  // background-color: $theme-color;
+  background-color: #7ed321;
+  height:50px;
+  color:$color-white
+}
+.details  td{
+   width:100%;
+  text-align: left;
+  overflow:scroll; 
+  border-bottom: 1px solid lightblue;
+  padding: 8px 28px;
+ 
+ 
+}
+table{
+  border-collapse: separate;
+}
+.heading  th  {
+ width:100%;
+  text-align: left;
+  overflow:scroll; 
+  border-bottom: 1px solid lightblue;
+  padding: 8px 28px;
+  font-weight: bold;
+}
+.table-text{
+  text-transform: capitalize;
+}
